@@ -1,0 +1,183 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Full background with dark overlay */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fffffffa;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('WhatsApp Image 2025-08-24 at 4.57.15 PM (1).jpeg') no-repeat center center fixed;
+    background-size: 100% 100%;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.116); /* dark overlay */
+    z-index: -1;
+}
+
+/* Wrapper to center content */
+.main {
+    flex: 1; /* take up available space */
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: center; /* horizontal center */
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px; /* space equal to navbar height */
+}
+
+/* Main weather container */
+.weather-container {
+    background: rgba(0, 0, 0, 0.171);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 30px 50px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.247);
+    transition: transform 0.3s ease;
+}
+
+.weather-container:hover {
+    transform: scale(1.05);
+}
+
+/* Title */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Input field */
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background: rgb(255, 254, 254);
+    color: #000000f6;
+}
+
+input::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+/* Button */
+button {
+    padding: 12px 20px;
+    background: #6c6eff;
+    border: none;
+    border-radius: 10px;
+    color: #fffbfb;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #faf9f925;
+}
+
+/* Weather details */
+.weather-info {
+    margin-top: 20px;
+}
+
+.weather-info p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Temperature highlight */
+.temp {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Footer at bottom */
+.footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center; /* vertical alignment */
+    padding: 12px 30px;
+    position: fixed; /* stay at top */
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+/* Logo */
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1c72af;
+}
+
+/* Active Page Highlight */
+.nav-links .active {
+    color: #1c72af;
+    font-weight: bold;
+    border-bottom: 2px solid #1c72af;
+}

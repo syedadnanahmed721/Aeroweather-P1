@@ -1,0 +1,104 @@
+/* Reset and Layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('WhatsApp Image 2025-08-24 at 4.57.15 PM (1).jpeg') no-repeat center center fixed;
+    background-size: 100% 100%; /* ✅ keeps full image, no stretch */
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center; /* vertical alignment */
+    padding: 12px 30px;
+    position: fixed; /* stay at top */
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Logo */
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    
+   font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1c72af;
+}
+
+/* Active Page Highlight */
+.nav-links a.active {
+    color: #1c72af;
+    font-weight: bold;
+    border-bottom: 2px solid #1c72af;
+}
+
+/* Main Section */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 150px; /* ✅ keeps content below navbar */
+}
+
+/* Content Box */
+.content-box {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 50px;
+    max-width: 700px;
+    width: 90%;
+    color: white;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.content-box h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.content-box h3 {
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    color: white;
+    text-align: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0);
+}
